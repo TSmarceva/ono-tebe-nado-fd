@@ -59,7 +59,7 @@
     background-size: cover;
     background-position: center;
     text-align: center;
-    color: #fff;  
+    color: #fff;
 }
 
 .aligned-text_center {
@@ -186,8 +186,8 @@
 
 .article {
     padding: auto;
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 .card__link {
@@ -255,7 +255,7 @@
     
 }
 
-.lots__look-more-link{ 
+.lots__look-more-link {
     margin-top: 30px;
     margin-left: 40px;
     margin-bottom: 2px;
@@ -307,7 +307,7 @@
     display: flex;
     flex-direction: column;
     gap: 28px;
-    margin-top: 140px;
+    margin-top: 10px;
     padding-right: 5px;
 }
 
@@ -344,8 +344,8 @@
     width: 149px;
     height: 64px;
     text-align: center;
-    gap: -1; 
-    justify-self:center; 
+    gap: -1;
+    justify-self:center;
 }
 
 .footer_social-icon {
