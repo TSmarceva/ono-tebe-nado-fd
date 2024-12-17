@@ -37,7 +37,7 @@
 }
 
 .header_address {
-    padding: 5px 25.48px 2px 0;
+    margin-right: 25.48px;
     justify-self: end;
     width: 240.52px;
     height: 98px;
@@ -69,8 +69,6 @@
     font: 700 100px / 1 "Raleway", sans-serif;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    
-    
 }
 
 .aligned-text_right {
@@ -84,13 +82,18 @@
 }
 
 .aligned-text_left {
-    padding: 165px 734px 477px 50px;
+    padding: 165px 734px 477px 10px;
     font: 700 100px / 1.15 "Raleway", sans-serif;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     width: 316px;
     height: 115px;
     
+}
+
+.aligned-text {
+    width: 1100px;
+    height: 757px;
 }
 
 .letter-spacing-extended {
@@ -121,6 +124,8 @@
     color: #fff;
    
 }
+
+
 
 .cover__description {
     margin-top: 133px;
@@ -236,7 +241,7 @@
     font: 400 20px / 1.2 "Raleway", sans-serif;
     position: relative;
     z-index: 1;
-    text-decoration: none;
+    list-style: none;
 }
 
 .card_type_film {
