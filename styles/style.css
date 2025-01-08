@@ -72,7 +72,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.6);
@@ -80,12 +80,13 @@
 }
 
 .cover__title {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     padding: 165px 50px 0 50px;
     gap: 20px;
     font: 700 100px / 1.15 "Raleway", sans-serif;
     color: #fff;
+    z-index: 3;
 }
 
 .aligned-text {
@@ -95,29 +96,27 @@
 
 .aligned-text_center {
     text-align: center;
-    font: 700 100px / 1 "Raleway", sans-serif;
+    line-height: 1;
 }
 
 .aligned-text_right {
-    text-align: end;
-    font: 700 100px / 1 "Raleway", sans-serif;
+    text-align: right;
+    line-height: 1;
 }
 
 .aligned-text_left {
     text-align: left;
-    font: 700 100px / 1.15 "Raleway", sans-serif;
 }
 
 .letter-spacing-extended {
-    font: 700 100px / 1 "Raleway", sans-serif;
     letter-spacing: 0.6em;
 }
 
 .cover__description {
     padding-bottom: 50px;
-    margin: 106px 50px 0 50px;
+    margin: 135px 50px 0 80px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,12 +125,11 @@
 
 .cover__description_subline {
     word-spacing: 0.9em;
-    font-size: 22px;
+    font: 400 22px / 1.27273 "Raleway", sans-serif;
 }
 
 .letter-spacing-extended_subline {
     font: 400 22px / 1.27273 "Raleway", sans-serif;
-    letter-spacing: 1.1em;
 }
 
 .cover__description_button {
@@ -176,15 +174,6 @@
     display: flex;
 }
 
-.card__link {
-    width: 334px;
-    padding: top 27px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
 .card {
     width: 334px;
     height: 100%;
@@ -195,15 +184,6 @@
     background-size: cover;
     background-position: center;
 }
-
-.lots__card-list-item {
-    position: relative;
-    width: 334px;
-    flex-grow: 1;
-    background-size: cover;
-    background-position: center;
-}
-
 .card__title {
     padding: 51px 40px 0;
     font: 700 22px / 1.2 "Raleway", sans-serif;
@@ -213,6 +193,16 @@
     z-index: 1;
 }
 
+.card_link {
+    width: 334px;
+    height: 100%;
+    padding: top 27px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-decoration: none;
+}
 .card__text {
     padding-left: 40px;
     padding-right: 40px;
@@ -222,9 +212,16 @@
     text-decoration: none;
 }
 
+.lots__card-list-item {
+    position: relative;
+    width: 334px;
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center;
+}
+
 .card_type_film {
     background-image: url(../images/card-lot-01.jpg);
-
 }
 
 .card_type_book {
@@ -236,7 +233,6 @@
 }
 
 .lots__look-more-link {
-    margin-top: 30px;
     margin-left: 40px;
     margin-bottom: 2px;
     display: block;
@@ -248,13 +244,13 @@
 
 .about {
     width: 1052px;
-    margin: 120px 24px 180px 24px;
+    margin: 150px 24px 180px 24px;
     display: grid;
     grid-template-columns: 359px auto;
 }
 
 .about_logo {
-    margin: 58px 72px 320px 47px;
+    margin: 30px 72px 320px 47px;
     width: 240px;
     height: 240px;
     display: grid;
@@ -272,7 +268,7 @@
 }
 
 .about_column {
-    margin: 163px 24px 0 0;
+    margin: 130px 24px 0 0;
     width: 693px;
 }
 
@@ -310,6 +306,7 @@
     font: 400 18px / 1.35 "Raleway", sans-serif;
     letter-spacing: 0.01em;
     color: #000;
+    text-wrap: pretty;
 }
 
 .footer__menu-list-item {
@@ -319,6 +316,7 @@
 
 .footer_menu-list {
     display: flex;
+    flex-direction: column;
     list-style: none;
     margin-top: 1px;
     margin-bottom: 115px;
@@ -329,6 +327,7 @@
     text-align: center;
     gap: -1;
     justify-self:center;
+    text-underline-offset: 4px;
 }
 
 .footer_social-icon {
@@ -339,12 +338,15 @@
 }
 
 .footer_social-link {
-    display: inline-flex;
-    flex-direction: row;
     gap: 48px;
 }
 
 .footer_social-list {
     list-style: none;
     justify-self:end;
+}
+
+.footer_social-list-item {
+    display: inline-flex;
+    flex-direction: row;
 }
